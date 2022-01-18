@@ -2,35 +2,85 @@
 @use "../../mixins" as *;
 
 .about {
-  padding-top: 100px;
-  padding-bottom: 100px;
   letter-spacing: 0.055em;
   background-color: $color-gray-light;
 
+  @include lg-min {
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
+  }
+
+  @include lg-md {
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
+  }
+
+  @include md {
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
+  }
+
   h2 {
     margin-top: 0;
+  }
+  p {
+    color: $color-gray;
+    @include lg-min {
+      font-size: 1.125rem;
+    }
   }
 
   &__container {
     @extend %container;
     display: grid;
-    gap: $gap-x5;
-    grid-template-columns: 1fr 271px;
+
+    @include lg-min {
+      gap: $gap-x5;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include lg-md {
+      gap: $gap-x2;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__text-content p:first-of-type {
     position: relative;
     margin-top: -5px;
   }
+
   &__text-content p:first-of-type::after {
     content: "";
     position: absolute;
     top: 0;
-    right: -50px;
     width: 2px;
     height: 200px;
     background-color: rgba($color-gray, 0.1);
+
+    @include lg-min {
+      right: -50px;
+    }
+
+    @include lg-md {
+      right: -20px;
+    }
+
+    @include md-sm {
+      right: -10px;
+    }
   }
+
   &__text-content p:last-of-type {
     margin: 0;
   }

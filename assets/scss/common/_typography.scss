@@ -37,16 +37,27 @@ h2 {
   color: $color-primary;
   font-family: "Roboto Slab", serif;
   line-height: 1.2em;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+
+  @include lg-min {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  @include lg-md {
+    font-size: 2rem;
+    margin-bottom: 2.625rem;
+  }
+  @include md-sm {
+    font-size: 1.5rem;
+    margin-bottom: 2.25rem;
+  }
+  @include sm {
+    font-size: 1.5rem;
+    margin-bottom: 2.25rem;
+    text-align: center;
+  }
 }
 
 a {
   text-decoration: none;
   color: $color-light;
-}
-
-p {
-  color: $color-gray;
-  font-size: 1.125rem;
 }

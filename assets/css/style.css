@@ -382,18 +382,11 @@ h2 {
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   line-height: 1.2em;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
 }
 
 a {
   text-decoration: none;
   color: #ffffff;
-}
-
-p {
-  color: #637588;
-  font-size: 1.125rem;
 }
 
 .btn {
@@ -698,18 +691,17 @@ p {
 }
 
 .about {
-  padding-top: 100px;
-  padding-bottom: 100px;
   letter-spacing: 0.055em;
   background-color: #e5e5e5;
 }
 .about h2 {
   margin-top: 0;
 }
+.about p {
+  color: #637588;
+}
 .about__container {
   display: grid;
-  gap: 100px;
-  grid-template-columns: 1fr 271px;
 }
 .about__text-content p:first-of-type {
   position: relative;
@@ -719,7 +711,6 @@ p {
   content: "";
   position: absolute;
   top: 0;
-  right: -50px;
   width: 2px;
   height: 200px;
   background-color: rgba(99, 117, 136, 0.1);
@@ -777,6 +768,10 @@ p {
   h1 {
     font-size: 3.75rem;
   }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
   .btn--light {
     width: 250px;
     height: 60px;
@@ -792,6 +787,20 @@ p {
   .skill-item__title {
     font-size: 1.25rem;
   }
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .about p {
+    font-size: 1.125rem;
+  }
+  .about__container {
+    gap: 100px;
+    grid-template-columns: 1fr 271px;
+  }
+  .about__text-content p:first-of-type::after {
+    right: -50px;
+  }
 }
 @media (max-width: 991.8px) {
   .skill-item__title {
@@ -801,6 +810,10 @@ p {
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2.625rem;
   }
   .btn--light {
     width: 200px;
@@ -812,6 +825,17 @@ p {
   .skills__container {
     gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+  }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .about__container {
+    gap: 40px;
+    grid-template-columns: 1fr 271px;
+  }
+  .about__text-content p:first-of-type::after {
+    right: -20px;
   }
 }
 @media (max-width: 767.8px) {
@@ -857,11 +881,26 @@ p {
   .header-content__title {
     margin: 0 0 33px;
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2.25rem;
+  }
   .skills__container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+  }
+  .about__container {
+    gap: 20px;
+    grid-template-columns: 1fr 236px;
+  }
+  .about__text-content p:first-of-type::after {
+    right: -10px;
   }
 }
 @media (max-height: 690px) {
@@ -870,6 +909,11 @@ p {
   }
 }
 @media (max-width: 575.8px) {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2.25rem;
+    text-align: center;
+  }
   .btn--primary {
     width: 100%;
   }
@@ -888,5 +932,9 @@ p {
   .skills__container {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+  .about__container {
+    gap: 20px;
+    grid-template-columns: 1fr;
   }
 }
