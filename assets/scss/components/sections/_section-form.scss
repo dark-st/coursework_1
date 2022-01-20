@@ -9,7 +9,14 @@
     @extend %container;
     display: grid;
     gap: $gap;
-    grid-template-columns: repeat(3, 1fr);
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &-item {
@@ -42,6 +49,11 @@
         border-color: rgba($color-light, 0.15);
         border-bottom-color: $color-light;
         background-color: rgba($color-light, 0.15);
+      }
+    }
+    &:nth-of-type(1) {
+      @include md-sm {
+        grid-column: 1 / span 2;
       }
     }
   }

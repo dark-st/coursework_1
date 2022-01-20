@@ -740,7 +740,6 @@ input {
 .subscribe-form__container {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
 .subscribe-form-item__input {
   height: 60px;
@@ -839,6 +838,9 @@ input {
   }
   .header-navbar__link {
     padding: 20px 10px;
+  }
+  .subscribe-form__container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 992px) {
@@ -978,6 +980,12 @@ input {
   }
   .about__text-content p:first-of-type::after {
     right: -10px;
+  }
+  .subscribe-form__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscribe-form-item:nth-of-type(1) {
+    grid-column: 1/span 2;
   }
 }
 @media (max-height: 690px) {
