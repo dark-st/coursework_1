@@ -61,3 +61,10 @@ a {
   text-decoration: none;
   color: $color-light;
 }
+
+input {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}

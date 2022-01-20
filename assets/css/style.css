@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.about__container, .header-content__container, .header-menu__container {
+.subscribe-form__container, .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: 0 auto;
   padding-right: 20px;
@@ -389,6 +389,13 @@ a {
   color: #ffffff;
 }
 
+input {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,11 +406,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 1em;
-  padding-left: 1em;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   letter-spacing: 0.1em;
 }
 .btn:hover, .btn:focus {
@@ -418,7 +423,6 @@ a {
   height: 60px;
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
-  /*  */
   font-size: 1.125rem;
 }
 
@@ -727,6 +731,79 @@ a {
 .about__image img {
   max-width: 100%;
   max-height: 480px;
+}
+
+.subscribe-form {
+  background-color: #2d3651;
+  padding: 30px 0;
+}
+.subscribe-form__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.subscribe-form-item__input {
+  height: 60px;
+  width: 100%;
+  display: block;
+  padding: 0 30px;
+  font-size: 1.125rem;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.subscribe-form-item__input::-webkit-input-placeholder {
+  color: #637588;
+}
+.subscribe-form-item__input::-moz-placeholder {
+  color: #637588;
+}
+.subscribe-form-item__input:-ms-input-placeholder {
+  color: #637588;
+}
+.subscribe-form-item__input::-ms-input-placeholder {
+  color: #637588;
+}
+.subscribe-form-item__input::placeholder {
+  color: #637588;
+}
+.subscribe-form-item__input:hover::-webkit-input-placeholder, .subscribe-form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+.subscribe-form-item__input:hover::-moz-placeholder, .subscribe-form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+.subscribe-form-item__input:hover:-ms-input-placeholder, .subscribe-form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+.subscribe-form-item__input:hover::-ms-input-placeholder, .subscribe-form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+.subscribe-form-item__input:hover::placeholder, .subscribe-form-item__input:focus::placeholder {
+  color: #8c9bab;
+}
+.subscribe-form-item__input:hover, .subscribe-form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.subscribe-form-item .btn--primary {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.subscribe-form-item .btn--primary:hover,
+.subscribe-form .btn--primary:focus {
+  cursor: pointer;
+  border-color: #ffffff;
+  background-color: #d66926;
 }
 @media (min-width: 576px) {
   .btn--primary {
