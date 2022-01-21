@@ -1,0 +1,86 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.posts {
+  padding: $gap-x5 0;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $gap;
+
+    padding-bottom: $gap;
+
+    grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-item {
+    background-color: #f2f2f2;
+
+    p {
+      text-align: center;
+      color: $color-gray;
+      letter-spacing: 0;
+    }
+
+    &:hover {
+      background-color: darken(#f2f2f2, 10.25); // d8d8d8 //
+    }
+
+    &:hover &__image img {
+      transform: scale(1.1);
+    }
+
+    &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      img {
+        transition: 0.5s;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      display: grid;
+      align-content: center;
+      padding: $gap;
+
+      h3 {
+        text-align: center;
+        font-family: "Roboto Slab", serif;
+      }
+    }
+
+    &__link {
+      display: grid;
+      overflow: hidden;
+
+      height: 100%;
+
+      grid-template-rows: 300px 1fr;
+    }
+  }
+
+  &__button {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@for $i from 1 through 6 {
+  .posts-item:nth-of-type(#{$i}) {
+    grid-area: b#{$i};
+  }
+}
