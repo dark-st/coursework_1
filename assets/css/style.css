@@ -826,6 +826,9 @@ input {
 }
 .posts-item {
   background-color: #f2f2f2;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .posts-item p {
   text-align: center;
