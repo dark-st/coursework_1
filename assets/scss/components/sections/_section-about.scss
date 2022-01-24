@@ -62,10 +62,10 @@
 
   &__text-content p:first-of-type::after {
     content: "";
-    position: absolute;
-    top: 0;
     width: 2px;
     height: 200px;
+    position: absolute;
+    top: 0;
     background-color: rgba($color-gray, 0.1);
 
     @include lg-min {
